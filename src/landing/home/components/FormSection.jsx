@@ -131,11 +131,9 @@ function FormSection({ selectedTransport, selectedCountry }) {
       <div className="container reveal">
         <h1 className="main-title">{t("form.title")}</h1>
         <p className="desc">{t("form.desc")}</p>
-
         <form className="form-content" onSubmit={handleSubmit} noValidate>
           <TransportForm {...fieldProps} />
           <ContactsForm {...fieldProps} />
-
           <label className="form-accept">
             <input
               className="form-accept-input"
@@ -151,7 +149,6 @@ function FormSection({ selectedTransport, selectedCountry }) {
               </Link>
             </span>
           </label>
-
           {errors.accept && (
             <span className="form-error form-accept-error">
               {errors.accept}
@@ -166,31 +163,28 @@ function FormSection({ selectedTransport, selectedCountry }) {
               {isSubmitting ? t("submit.sending") : t("buttons.send_btn")}
               <span className="icon icon-send" />
             </button>
-            {submitStatus && (
-              <div
-                className={classNames(
-                  "form-message",
-                  `form-message-${submitStatus}`,
-                )}
-              >
-                {submitStatus === "success" ? (
-                  <span className="icon-checked form-message-icon" />
-                ) : (
-                  <span className="icon-error form-message-icon" />
-                )}
-                <div>
-                  <h2 className="form-message-title">
-                    {t(`submit.${submitStatus}.title`)}
-                  </h2>
-                  <p className="form-message-text">
-                    {t(`submit.${submitStatus}.desc`)}
-                  </p>
-                </div>
-              </div>
-            )}
           </div>
         </form>
       </div>
+      {submitStatus && (
+        <div
+          className={classNames("form-message", `form-message-${submitStatus}`)}
+        >
+          {submitStatus === "success" ? (
+            <span className="icon-checked form-message-icon" />
+          ) : (
+            <span className="icon-error form-message-icon" />
+          )}
+          <div>
+            <h2 className="form-message-title">
+              {t(`submit.${submitStatus}.title`)}
+            </h2>
+            <p className="form-message-text">
+              {t(`submit.${submitStatus}.desc`)}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
