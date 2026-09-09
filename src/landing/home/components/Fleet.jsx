@@ -8,8 +8,8 @@ const Fleet = ({ onSelectTransport }) => {
   const { t } = useTranslation();
 
   return (
-    <section id="fleet" className="section light-section fleet-section reveal">
-      <div className="container">
+    <section id="fleet" className="section light-section fleet-section">
+      <div className="container reveal">
         <h1 className="main-title spacing">{t("main_page.cars.title")}</h1>
         <p className="desc spacing services-desc">{t("main_page.cars.desc")}</p>
         <div className="fleet-cards">
