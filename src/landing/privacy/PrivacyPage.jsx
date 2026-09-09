@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import AnimationGlobal from "../../components/animation/AnimationGlobal";
 import { CONTACTS } from "../../constants/general/Constants";
 import Seo from "../../components/seo/Seo";
 import "./styles/privacy.scss";
@@ -13,7 +12,6 @@ function PrivacyPage() {
 
   return (
     <>
-      <AnimationGlobal />
       <Seo
         title={t("seo.privacy.title")}
         description={t("seo.privacy.description")}
@@ -22,7 +20,7 @@ function PrivacyPage() {
       />
       <main className="privacy-main">
         <section className="inner-page light-section privacy">
-          <div className="container privacy-content reveal">
+          <div className="container privacy-content">
             <div className="privacy-header">
               <h1 className="main-title">{t("privacy.title")}</h1>
               <div className="privacy-intro">
