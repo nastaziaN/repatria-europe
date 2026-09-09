@@ -42,6 +42,12 @@ export default {
         return json({ message: "Required fields are missing" }, 400);
       }
 
+      console.log("Resend key check:", {
+        exists: Boolean(env.RESEND_API_KEY),
+        startsWithRe: env.RESEND_API_KEY?.startsWith("re_"),
+        length: env.RESEND_API_KEY?.length,
+      });
+
       const response = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
