@@ -66,6 +66,7 @@ export const servicesList = [
 export const fleetList = [
   {
     id: 1,
+    transportId: 1,
     title: "main_page.cars.list.1.title",
     model: "main_page.cars.list.1.model",
     desc: "main_page.cars.list.1.desc",
@@ -79,6 +80,7 @@ export const fleetList = [
   },
   {
     id: 2,
+    transportId: 2,
     title: "main_page.cars.list.2.title",
     model: "main_page.cars.list.2.model",
     desc: "main_page.cars.list.2.desc",
@@ -92,6 +94,7 @@ export const fleetList = [
   },
   {
     id: 3,
+    transportId: 3,
     title: "main_page.cars.list.3.title",
     model: "main_page.cars.list.3.model",
     desc: "main_page.cars.list.3.desc",
@@ -105,6 +108,7 @@ export const fleetList = [
   },
   {
     id: 4,
+    transportId: 3,
     title: "main_page.cars.list.4.title",
     model: "main_page.cars.list.4.model",
     desc: "main_page.cars.list.4.desc",

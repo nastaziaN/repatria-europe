@@ -16,7 +16,15 @@ const Fleet = ({ onSelectTransport }) => {
           <Slider
             items={fleetList}
             disableFrom="large"
-            renderItem={({ id, title, model, desc, specifications, img }) => (
+            renderItem={({
+              id,
+              transportId,
+              title,
+              model,
+              desc,
+              specifications,
+              img,
+            }) => (
               <div key={id} className="car-card">
                 <img className="car-card-img" src={img} />
                 <div className="car-card-desc">
@@ -33,8 +41,7 @@ const Fleet = ({ onSelectTransport }) => {
                   <button
                     className="btn secondary-btn more-btn"
                     onClick={() => {
-                      onSelectTransport(id);
-
+                      onSelectTransport(transportId);
                       document.getElementById("contacts")?.scrollIntoView({
                         behavior: "smooth",
                         block: "start",

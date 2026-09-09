@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import classNames from "classnames";
 import useFormValidation from "../../../hooks/useFormValidation";
 import { prepareFormData } from "../../../helpers/prepareFormData";
@@ -10,7 +11,7 @@ import {
   transportFields,
   contactFields,
   coffinOptions,
-} from "../../../constants/form/Constant";
+} from "../../../constants/form/Constants";
 import "../styles/form-section.scss";
 
 function FormSection({ selectedTransport, selectedCountry }) {
@@ -138,9 +139,9 @@ function FormSection({ selectedTransport, selectedCountry }) {
             />
             <span className="form-accept-text">
               {t("form.accept")}{" "}
-              <a className="privacy-link" href="/privacy_policy">
+              <Link className="privacy-link" to="/privacy_policy">
                 {t("form.privacy_policy")}
-              </a>
+              </Link>
             </span>
           </label>
 

@@ -1,5 +1,5 @@
 import FormField from "./FormField";
-import { contactFields } from "../../constants/form/Constant";
+import { contactFields } from "../../constants/form/Constants";
 
 function ContactsForm({
   t,

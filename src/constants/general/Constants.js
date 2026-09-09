@@ -10,7 +10,7 @@ export const CONTACTS = {
   },
   email: {
     value: " repatriaeurope@gmail.com",
-    link: "mailto:  repatriaeurope@gmail.com",
+    link: "mailto: repatriaeurope@gmail.com",
   },
 };
 

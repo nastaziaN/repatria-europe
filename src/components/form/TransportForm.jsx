@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import FormField from "./FormField";
-import { transportFields, coffinOptions } from "../../constants/form/Constant";
+import { transportFields, coffinOptions } from "../../constants/form/Constants";
 
 function TransportForm({
   t,
@@ -25,7 +25,6 @@ function TransportForm({
         <span className="form-block-icon icon-globe" />
         <h3 className="form-block-title">{t("form.transport.form_title")}</h3>
       </div>
-
       <div className="transport-fields grid">
         {transportFields.map((field) => (
           <div
@@ -35,12 +34,10 @@ function TransportForm({
             <FormField field={field} {...fieldProps} />
           </div>
         ))}
-
         <div className="coffin-field col-12 col-md-6">
           <p className="form-label">
             {t("form.transport.inputs.coffin.label")}
           </p>
-
           <div className="coffin-list">
             {coffinOptions.map(({ id, label, icon }) => (
               <label key={id} className="coffin-option">
@@ -56,13 +53,11 @@ function TransportForm({
             ))}
           </div>
         </div>
-
         <div className="additional-field col-12 col-md-6">
           <div className="form-field">
             <label className="form-label" htmlFor="additional_info">
               {t("form.transport.inputs.additional_info.label")}
             </label>
-
             <textarea
               className="form-control form-textarea"
               id="additional_info"
