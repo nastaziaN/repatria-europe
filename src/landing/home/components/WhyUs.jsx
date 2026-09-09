@@ -22,7 +22,7 @@ const WhyUs = () => {
         <p className="desc whyus-desc centered">{t("main_page.why_us.desc")}</p>
         <div className="benefits-wrap">
           <div className="img-wrap-dark">
-            <img className="img" src={WhyImg} alt="" />
+            <img className="img" src={WhyImg} alt={t("images.why_us")} />
           </div>
           <div className="benefits">
             <ul className="benefits-list">

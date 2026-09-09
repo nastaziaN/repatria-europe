@@ -64,7 +64,11 @@ const Countries = ({ onSelectCountry }) => {
             </button>
           </div>
           <div className="countries-img">
-            <img className="map-img" src={MapImg} alt="" />
+            <img
+              className="map-img"
+              src={MapImg}
+              alt={t("images.europe_map")}
+            />
           </div>
         </div>
       </div>

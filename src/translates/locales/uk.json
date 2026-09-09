@@ -642,5 +642,21 @@
       "title": "Політика конфіденційності | Repatria Europe",
       "description": "Політика конфіденційності Repatria Europe: інформація про обробку персональних даних та права користувачів."
     }
+  },
+  "images": {
+    "fleet": {
+      "1": "Mercedes-Benz Sprinter Repatria Europe",
+      "2": "Mercedes-Benz V-Class Repatria Europe",
+      "3": "Ford Transit Custom Repatria Europe"
+    },
+    "hero": "Repatria Europe - міжнародна репатріація по всій Європі",
+    "why_us": "Професійний супровід міжнародної репатріації померлих Repatria Europe",
+    "europe_map": "Карта країн Європи, у яких працює Repatria Europe",
+    "how_it_works": "Автопарк Repatria Europe для міжнародних похоронних перевезень",
+    "documents": "Оформлення документів для міжнародного перевезення та репатріації померлих",
+    "about": {
+      "history": "Прощання з померлим",
+      "cta": "Транспорт Repatria Europe для міжнародних перевезень"
+    }
   }
 }

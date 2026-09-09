@@ -42,7 +42,11 @@ const History = () => {
           </div>
         </div>
         <div className="history-img-wrap img-wrap-light">
-          <img src={HistoryImg} className="img" alt="" />
+          <img
+            src={HistoryImg}
+            className="img"
+            alt={t("images.about.history")}
+          />
         </div>
       </div>
     </section>

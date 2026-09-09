@@ -31,7 +31,7 @@ const Cta = () => {
           </div>
         </div>
         <div className="img-wrap-dark">
-          <img src={CtaImg} alt="" />
+          <img src={CtaImg} alt={t("images.about.cta")} />
         </div>
       </div>
     </section>

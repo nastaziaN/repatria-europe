@@ -31,7 +31,7 @@ const About = () => {
           <img
             className="about-img img"
             src={AboutImage}
-            alt={t("brand_name")}
+            alt={t("images.hero")}
           />
         </div>
         <div className="about-content">

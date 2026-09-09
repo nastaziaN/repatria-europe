@@ -41,7 +41,11 @@ const Hero = () => {
           <p className="hero-slogan">{t("slogan")}</p>
         </div>
         <div className="cover">
-          <img className="hero-img img" src={HeroImage} />
+          <img
+            className="hero-img img"
+            src={HeroImage}
+            alt={t("images.hero")}
+          />
         </div>
         <ul className="hero-list list">
           {heroList.map(({ id, item }) => (

@@ -638,5 +638,21 @@
       "title": "Privacy Policy | Repatria Europe",
       "description": "Repatria Europe privacy policy covering personal data processing and user rights."
     }
+  },
+  "images": {
+    "fleet": {
+      "1": "Mercedes-Benz Sprinter Repatria Europe",
+      "2": "Mercedes-Benz V-Class Repatria Europe",
+      "3": "Ford Transit Custom Repatria Europe"
+    },
+    "hero": "Repatria Europe - international repatriation across Europe",
+    "why_us": "Professional support for international repatriation of the deceased by Repatria Europe",
+    "europe_map": "Map of European countries served by Repatria Europe",
+    "how_it_works": "Repatria Europe fleet for international funeral transportation",
+    "documents": "Preparation of documents for international transportation and repatriation of the deceased",
+    "about": {
+      "history": "Farewell to the deceased",
+      "cta": "Repatria Europe transport for international transportation"
+    }
   }
 }

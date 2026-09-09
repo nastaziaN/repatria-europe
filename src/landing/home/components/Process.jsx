@@ -23,7 +23,11 @@ const Process = () => {
         <div className="process-content">
           <div className="process-content-cta">
             <div className="img-wrap-dark">
-              <img className="process-img img" src={CarsImage} alt="" />
+              <img
+                className="process-img img"
+                src={CarsImage}
+                alt={t("images.how_it_works")}
+              />
             </div>
             <div className="btn-group">
               <button

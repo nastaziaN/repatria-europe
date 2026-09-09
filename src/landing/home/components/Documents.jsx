@@ -14,7 +14,11 @@ function Documents() {
         <p className="desc">{t("main_page.docs.desc")}</p>
         <div className="docs-content">
           <div className="docs-img-wrap">
-            <img className="docs-img img" src={DocsImg} alt="" />
+            <img
+              className="docs-img img"
+              src={DocsImg}
+              alt={t("images.documents")}
+            />
           </div>
           <ul className="docs-list list">
             {docsList.map(({ id, title, desc, icon }) => (

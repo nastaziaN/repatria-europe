@@ -24,9 +24,10 @@ const Fleet = ({ onSelectTransport }) => {
               desc,
               specifications,
               img,
+              alt,
             }) => (
               <div key={id} className="car-card">
-                <img className="car-card-img" src={img} />
+                <img className="car-card-img" src={img} alt={t(alt)} />
                 <div className="car-card-desc">
                   <h2 className="car-title">{t(title)}</h2>
                   <span className="car-model">{t(model)}</span>

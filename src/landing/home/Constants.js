@@ -77,6 +77,7 @@ export const fleetList = [
       "main_page.cars.list.1.specifications.4",
     ],
     img: Car1,
+    alt: "images.fleet.1",
   },
   {
     id: 2,
@@ -91,6 +92,7 @@ export const fleetList = [
       "main_page.cars.list.2.specifications.4",
     ],
     img: Car2,
+    alt: "images.fleet.2",
   },
   {
     id: 3,
@@ -105,6 +107,7 @@ export const fleetList = [
       "main_page.cars.list.3.specifications.4",
     ],
     img: Car3,
+    alt: "images.fleet.3",
   },
   {
     id: 4,
@@ -119,6 +122,7 @@ export const fleetList = [
       "main_page.cars.list.4.specifications.4",
     ],
     img: Car3,
+    alt: "images.fleet.3",
   },
 ];
 

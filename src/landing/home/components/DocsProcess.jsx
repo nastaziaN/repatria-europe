@@ -11,7 +11,6 @@ function DocsProcess() {
         <h1 className="main-title spacing">
           {t("main_page.docs_process.title")}
         </h1>
-        {/* <div className="docs-process-content"> */}
         <ul className="process-list list">
           {docsProcessList.map(({ id, title, desc }) => (
             <li key={id} className="process-item">
@@ -21,7 +20,6 @@ function DocsProcess() {
             </li>
           ))}
         </ul>
-        {/* </div> */}
       </div>
     </section>
   );
