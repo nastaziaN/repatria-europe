@@ -25,25 +25,10 @@ const Menu = () => {
         behavior: "smooth",
         block: "start",
       });
-
-      window.history.replaceState(null, "", `#${section}`);
     } else {
       navigate(`/#${section}`);
     }
   };
-
-  useEffect(() => {
-    if (location.pathname !== "/" || !location.hash) return;
-
-    const section = location.hash.slice(1);
-
-    requestAnimationFrame(() => {
-      document.getElementById(section)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-  }, [location.pathname, location.hash]);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -59,34 +44,42 @@ const Menu = () => {
       return;
     }
 
-    const sections = menuItems
+    const sectionIds = menuItems
       .filter(({ section }) => section)
-      .map(({ section }) => document.getElementById(section))
-      .filter(Boolean);
+      .map(({ section }) => section);
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort(
-            (a, b) =>
-              Math.abs(a.boundingClientRect.top) -
-              Math.abs(b.boundingClientRect.top),
-          );
+    const handleScroll = () => {
+      const sections = sectionIds
+        .map((id) => document.getElementById(id))
+        .filter(Boolean);
 
-        if (visible.length) {
-          setActiveSection(visible[0].target.id);
+      if (!sections.length) return;
+
+      const offset = window.innerHeight * 0.3;
+
+      let currentSection = sections[0];
+
+      sections.forEach((section) => {
+        if (
+          Math.abs(section.getBoundingClientRect().top - offset) <
+          Math.abs(currentSection.getBoundingClientRect().top - offset)
+        ) {
+          currentSection = section;
         }
-      },
-      {
-        rootMargin: "-20% 0px -65% 0px",
-        threshold: 0,
-      },
-    );
+      });
 
-    sections.forEach((section) => observer.observe(section));
+      const section = currentSection.id;
 
-    return () => observer.disconnect();
+      setActiveSection(section);
+
+      const url = section === "hero" ? "/" : `/#${section}`;
+      window.history.replaceState(null, "", url);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
 
   return (

@@ -1,16 +1,23 @@
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import classNames from "classnames";
 import { quickContacts } from "../../constants/contacts/Constants";
 import "./styles/contact-actions.scss";
 
 const ContactActions = () => {
   const { t } = useTranslation();
-
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toForm = () => {
-    navigate("/#contacts");
+    if (location.pathname === "/") {
+      document.getElementById("contacts")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    } else {
+      navigate("/#contacts");
+    }
   };
 
   const phone = quickContacts.find(({ type }) => type === "phone");

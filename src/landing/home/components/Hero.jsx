@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import classNames from "classnames";
+import { useLocation } from "react-router-dom";
 import { heroList } from "../Constants";
 import "../styles/hero-section.scss";
 import HeroImage from "../../../img/hero.png";
@@ -7,6 +8,19 @@ import ContactActions from "../../../components/contacts/ContactActions";
 
 const Hero = () => {
   const { t } = useTranslation();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      requestAnimationFrame(() => {
+        document.querySelector(location.hash)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    }
+  }, [location.hash]);
 
   return (
     <section id="hero" className=" inner-page hero">
