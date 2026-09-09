@@ -9,8 +9,8 @@ export const CONTACTS = {
     link: "tel:+380506907777",
   },
   email: {
-    value: "repatria-europe@gmail.com",
-    link: "mailto:repatria-europe@gmail.com",
+    value: " repatriaeurope@gmail.com",
+    link: "mailto:  repatriaeurope@gmail.com",
   },
 };
 
