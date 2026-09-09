@@ -4,9 +4,8 @@ import StructuredData from "./components/seo/StructuredData";
 import Menu from "./landing/navigation/menu/Menu";
 import Footer from "./landing/navigation/footer/Footer";
 import PrivacyPage from "./landing/privacy/PrivacyPage";
-
-const HomePage = lazy(() => import("./landing/home/components/HomePage"));
-const AboutPage = lazy(() => import("./landing/about/components/AboutPage"));
+import HomePage from "./landing/home/components/HomePage";
+import AboutPage from "./landing/about/components/AboutPage";
 
 function App() {
   return (
@@ -15,13 +14,11 @@ function App() {
       <div className="app">
         <Menu />
         <main className="app-wrapper">
-          <Suspense fallback={null}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/privacy_policy" element={<PrivacyPage />} />
-            </Routes>
-          </Suspense>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/privacy_policy" element={<PrivacyPage />} />
+          </Routes>
         </main>
         <Footer />
       </div>
