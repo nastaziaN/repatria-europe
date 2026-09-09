@@ -10,6 +10,4 @@ export const sendRequest = async (data) => {
   if (!response.ok) {
     throw new Error("Request failed");
   }
-
-  return response.json();
 };
