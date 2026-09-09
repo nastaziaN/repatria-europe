@@ -98,9 +98,9 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <span className="copyright">{t("labels.copyright")}</span>
-        <a className="link privacy" href="/privacy_policy">
-          {t("labels.privacy_policy")}
-        </a>
+        <Link className="privacy-link" to="/privacy_policy">
+          {t("form.privacy_policy")}
+        </Link>
       </div>
     </footer>
   );
