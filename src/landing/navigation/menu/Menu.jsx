@@ -14,7 +14,6 @@ const Menu = () => {
   const navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
 
   const handleSectionClick = (e, section) => {
     e.preventDefault();
@@ -26,7 +25,9 @@ const Menu = () => {
         block: "start",
       });
     } else {
-      navigate(`/#${section}`);
+      navigate("/", {
+        state: { scrollTo: section },
+      });
     }
   };
 
@@ -37,50 +38,6 @@ const Menu = () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
-
-  useEffect(() => {
-    if (location.pathname !== "/") {
-      setActiveSection(null);
-      return;
-    }
-
-    const sectionIds = menuItems
-      .filter(({ section }) => section)
-      .map(({ section }) => section);
-
-    const handleScroll = () => {
-      const sections = sectionIds
-        .map((id) => document.getElementById(id))
-        .filter(Boolean);
-
-      if (!sections.length) return;
-
-      const offset = window.innerHeight * 0.3;
-
-      let currentSection = sections[0];
-
-      sections.forEach((section) => {
-        if (
-          Math.abs(section.getBoundingClientRect().top - offset) <
-          Math.abs(currentSection.getBoundingClientRect().top - offset)
-        ) {
-          currentSection = section;
-        }
-      });
-
-      const section = currentSection.id;
-
-      setActiveSection(section);
-
-      const url = section === "hero" ? "/" : `/#${section}`;
-      window.history.replaceState(null, "", url);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [location.pathname]);
 
   return (
     <nav
@@ -109,10 +66,7 @@ const Menu = () => {
         >
           <ul className="menu-list">
             {menuItems.map(({ id, key, to, section, path }) => {
-              const isActive = path
-                ? location.pathname === path
-                : location.pathname === "/" && activeSection === section;
-
+              const isActive = path ? location.pathname === path : false;
               return (
                 <li key={id} className="menu-item">
                   <Link

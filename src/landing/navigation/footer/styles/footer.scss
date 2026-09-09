@@ -116,6 +116,10 @@
       }
     }
   }
+
+  &-link-active {
+    color: color("primary", "gold");
+  }
 }
 
 @media (min-width: $large-screen) {

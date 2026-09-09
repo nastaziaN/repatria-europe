@@ -80,11 +80,7 @@ function FormSection({ selectedTransport, selectedCountry }) {
       setIsSubmitting(true);
       setSubmitStatus(null);
 
-      console.log("1. before send");
-
       await sendRequest(data);
-
-      console.log("2. after send");
 
       form.reset();
 
@@ -97,14 +93,13 @@ function FormSection({ selectedTransport, selectedCountry }) {
 
       setFormResetKey((prev) => prev + 1);
 
-      console.log("3. before success");
       setSubmitStatus("success");
 
       setTimeout(() => {
         setSubmitStatus(null);
       }, 3500);
     } catch (error) {
-      console.error("SUBMIT ERROR:", error);
+      console.error(error);
 
       setSubmitStatus("error");
 

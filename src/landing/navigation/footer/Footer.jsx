@@ -13,7 +13,7 @@ const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleNavigation = (e, to, section) => {
+  const handleNavigation = (e, section) => {
     if (!section) return;
 
     e.preventDefault();
@@ -23,10 +23,10 @@ const Footer = () => {
         behavior: "smooth",
         block: "start",
       });
-
-      window.history.replaceState(null, "", to);
     } else {
-      navigate(to);
+      navigate("/", {
+        state: { scrollTo: section },
+      });
     }
   };
 
@@ -48,17 +48,22 @@ const Footer = () => {
           <div className="footer-column col-6 col-md-3 col-lg-3">
             <h3 className="footer-title">{t("labels.links")}</h3>
             <ul className="footer-list">
-              {menuItems.map(({ id, key, to, section }) => (
-                <li key={id} className="footer-list-item">
-                  <Link
-                    className="link"
-                    to={to}
-                    onClick={(e) => handleNavigation(e, to, section)}
-                  >
-                    {t(key)}
-                  </Link>
-                </li>
-              ))}
+              {menuItems.map(({ id, key, to, section, path }) => {
+                const isActive = path ? location.pathname === path : false;
+                return (
+                  <li key={id} className="footer-list-item">
+                    <Link
+                      className={classNames("link", {
+                        "footer-link-active": isActive,
+                      })}
+                      to={to}
+                      onClick={(e) => handleNavigation(e, section)}
+                    >
+                      {t(key)}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="footer-column col-6 col-md-3 col-lg-3">
@@ -69,7 +74,7 @@ const Footer = () => {
                   <Link
                     to={to}
                     className="link"
-                    onClick={(e) => handleNavigation(e, to, section)}
+                    onClick={(e) => handleNavigation(e, section)}
                   >
                     {t(key)}
                   </Link>

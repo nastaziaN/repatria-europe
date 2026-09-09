@@ -3,7 +3,7 @@ export const menuItems = [
     id: "1",
     key: "menu.items.1",
     to: "/",
-    section: "hero",
+    path: "/",
   },
   {
     id: "2",

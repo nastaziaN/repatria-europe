@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { heroList } from "../Constants";
 import "../styles/hero-section.scss";
 import HeroImage from "../../../img/hero.png";
@@ -10,17 +10,25 @@ const Hero = () => {
   const { t } = useTranslation();
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    if (location.hash) {
-      requestAnimationFrame(() => {
-        document.querySelector(location.hash)?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+    const section = location.state?.scrollTo;
+
+    if (!section) return;
+
+    requestAnimationFrame(() => {
+      document.getElementById(section)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
-    }
-  }, [location.hash]);
+    });
+
+    navigate("/", {
+      replace: true,
+      state: null,
+    });
+  }, [location.state, navigate]);
 
   return (
     <section id="hero" className=" inner-page hero">
