@@ -1,0 +1,381 @@
+@import "../../../styles/utils/variables";
+@import "../../../styles/utils/colors";
+@import "../../../styles/utils/animations";
+
+.form-section {
+  .main-title,
+  .desc {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .form-content {
+    margin-top: 24px;
+    padding: 24px 16px;
+    background-color: $white;
+    border: 1px solid color("secondary", "yellow");
+    border-radius: 10px;
+  }
+
+  .form-block {
+    & + .form-block {
+      margin-top: 32px;
+    }
+  }
+
+  .form-block-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-block-icon {
+    display: flex;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid color("secondary", "yellow");
+    border-radius: 50%;
+    font-size: 22px;
+    color: color("secondary", "dark-yellow");
+  }
+
+  .form-block-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .form-block-desc {
+    max-width: 720px;
+    margin-top: 8px;
+    line-height: 1.35;
+  }
+
+  .transport-fields,
+  .contacts-fields {
+    margin-top: 18px;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    // gap: 8px;
+  }
+
+  .form-field > .form-label {
+    margin-bottom: 8px;
+  }
+
+  .form-label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .form-control {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    font-size: 16px;
+    border: 1px solid color("opacities", "blue-25%");
+    border-radius: 4px;
+    outline: none;
+    background-color: transparent;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    &::placeholder {
+      color: color("opacities", "blue-45%");
+    }
+
+    &:focus {
+      border-color: color("secondary", "dark-yellow");
+      box-shadow: 0 0 0 1px color("opacities", "yellow-15%");
+    }
+  }
+
+  .form-textarea {
+    min-height: 96px;
+    padding-top: 14px;
+    resize: vertical;
+  }
+
+  .coffin-field {
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+  .coffin-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .coffin-option {
+    position: relative;
+    display: flex;
+    min-height: 72px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid color("opacities", "blue-25%");
+    border-radius: 4px;
+    gap: 8px;
+    cursor: pointer;
+    transition:
+      border-color 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  .coffin-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked + .coffin-option-icon {
+      color: color("primary", "dark-blue");
+    }
+  }
+
+  .coffin-option:has(.coffin-input:checked) {
+    border-color: color("secondary", "yellow");
+  }
+
+  .coffin-option-icon {
+    font-size: 22px;
+    color: color("opacities", "blue-45%");
+  }
+
+  .coffin-option-label {
+    min-width: 0;
+    overflow-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .form-accept {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  .form-accept-text {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .privacy-link {
+    color: color("secondary", "dark-yellow");
+  }
+
+  .form-submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+  }
+
+  .form-submit-btn {
+    display: inline-flex;
+    min-width: 280px;
+    align-items: center;
+    justify-content: center;
+    background-color: color("secondary", "dark-yellow");
+    color: $white;
+    text-transform: uppercase;
+    gap: 10px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .form-error {
+    display: block;
+    color: color("secondary", "red");
+    font-size: 13px;
+  }
+
+  .form-accept-error {
+    margin: {
+      top: 4px;
+      left: 28px;
+    }
+  }
+
+  .form-control-error {
+    border-color: color("secondary", "red");
+  }
+
+  .form-accept-input {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    background: transparent;
+    border: 1px solid color("opacities", "blue-45%");
+    border-radius: 2px;
+    appearance: none;
+    cursor: pointer;
+
+    &:checked {
+      border-color: color("secondary", "dark-yellow");
+      background-color: color("secondary", "dark-yellow");
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        width: 4px;
+        height: 8px;
+        border: solid $white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  .form-message {
+    position: fixed;
+    display: flex;
+    left: 50%;
+    top: 16px;
+    min-width: 300px;
+    padding: 18px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background: $white;
+    border: 1px solid color("primary", "gold");
+    border-radius: 6px;
+    box-shadow: 0 16px 50px color("opacities", "blue-18%");
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: message-in 0.3s ease;
+  }
+
+  .form-message-icon {
+    flex-shrink: 0;
+    color: color("primary", "gold");
+    font-size: 28px;
+  }
+
+  .form-message-error {
+    border-color: color("secondary", "red");
+
+    .form-message-icon {
+      color: color("secondary", "red");
+    }
+  }
+
+  .form-message-title {
+    margin: 0 0 6px;
+    color: color("primary", "dark-blue");
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .form-message-text {
+    margin: 0;
+    color: color("opacities", "blue-65%");
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: $small-screen) {
+  .form-section {
+    .form-content {
+      padding: 32px;
+    }
+
+    .transport-fields,
+    .contacts-fields {
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+
+    .form-control {
+      height: 52px;
+    }
+
+    .form-textarea {
+      min-height: 106px;
+    }
+
+    .coffin-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .coffin-option {
+      min-height: 80px;
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .form-section {
+    .form-content {
+      padding: 40px 48px;
+    }
+
+    .form-block {
+      & + .form-block {
+        margin-top: 36px;
+      }
+    }
+
+    .form-block-icon {
+      font-size: 24px;
+    }
+
+    .transport-fields,
+    .contacts-fields {
+      margin-top: 20px;
+      column-gap: 32px;
+      row-gap: 18px;
+    }
+
+    .form-label {
+      font-size: 16px;
+    }
+
+    .form-control {
+      font-size: 15px;
+    }
+
+    .form-submit {
+      margin-top: 34px;
+    }
+
+    .coffin-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .form-message {
+      top: 24px;
+      max-width: 520px;
+      padding: 26px;
+      gap: 16px;
+    }
+
+    .form-message-icon {
+      font-size: 30px;
+    }
+
+    .form-message-title {
+      font-size: 20px;
+    }
+  }
+}

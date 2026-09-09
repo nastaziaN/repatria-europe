@@ -1,0 +1,68 @@
+// Default --------------
+$black: #000 !default;
+$white: #fff !default;
+
+$primary-colors: (
+  "ivory": #f1f0ec,
+  "gold": #e8aa02,
+  "dark-gold": #8f6802,
+  "dark-blue": #06121f,
+);
+
+$secondary-colors: (
+  "yellow": #d4a017,
+  "dark-yellow": #b98600,
+  "red": #b42318,
+  "light-violet": #8c6dff,
+  "blue": #2583e0,
+  "navy": #122033,
+);
+
+$shades-colors: (
+  "white": #fff,
+  "black": #000,
+);
+
+$opacities-colors: (
+  "white-80%": rgba(255, 255, 255, 0.8),
+  "white-70%": rgba(255, 255, 255, 0.7),
+  "white-75%": rgba(255, 255, 255, 0.75),
+  "white-50%": rgba(255, 255, 255, 0.5),
+  "yellow-15%": rgba(185, 134, 0, 0.15),
+  "blue-18%": rgba(6, 18, 31, 0.18),
+  "blue-25%": rgba(6, 18, 31, 0.25),
+  "blue-45%": rgba(6, 18, 31, 0.45),
+  "blue-65%": rgba(6, 18, 31, 0.65),
+  "dark-blue-45%": rgba(2, 18, 32, 0.45),
+  "black-45%": rgba(0, 0, 0, 0.45),
+  "black-70%": rgba(0, 0, 0, 0.7),
+);
+
+$colors: (
+  "primary": $primary-colors,
+  "secondary": $secondary-colors,
+  "shades": $shades-colors,
+  "opacities": $opacities-colors,
+);
+
+// color('primary', 'gold')
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr-color: map-get($colors, $color);
+
+    @if map-has-key($curr-color, $type) {
+      @return map-get($curr-color, $type);
+    }
+  }
+
+  @warn "Unknown `#{$type}` in #{$color}.";
+  @return null;
+}
+
+// base
+
+$base-bg: #06121f;
+$base_text: #d9d9d9;
+$base-link: #d9d9d9;
+// $base-border: color('shades', 'light-grey');

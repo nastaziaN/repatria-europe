@@ -1,0 +1,53 @@
+@import "./variables";
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span $i;
+  }
+}
+
+@media (min-width: $xs-small-screen) {
+  @for $i from 1 through 12 {
+    .col-xs-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@media (min-width: $small-screen) {
+  @for $i from 1 through 12 {
+    .col-s-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@media (min-width: $medium-screen) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      grid-column: span $i;
+    }
+  }
+}
+
+// @media (min-width: $desktop) {
+//   @for $i from 1 through 12 {
+//     .col-xl-#{$i} {
+//       grid-column: span $i;
+//     }
+//   }
+// }

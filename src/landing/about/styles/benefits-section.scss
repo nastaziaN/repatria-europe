@@ -1,0 +1,88 @@
+@import "../../../styles/utils/variables";
+@import "../../../styles/utils/colors";
+
+.benefits-section {
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 70dvh;
+    background: {
+      image: url("../../../img/why-about.png");
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+    }
+    z-index: 1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 166px;
+      background: linear-gradient(
+        0deg,
+        rgba(241, 240, 236, 0) 0%,
+        rgba(241, 240, 236, 0.5) 50%,
+        #f1f0ec 75%
+      );
+      z-index: -1;
+    }
+  }
+
+  .benefits-list {
+    margin-top: auto;
+  }
+
+  .benefit-card {
+    min-height: 110px;
+    padding: 12px 16px;
+    color: $white;
+    background: linear-gradient(
+      180deg,
+      #06121f 0%,
+      rgba(12, 27, 48, 0.75) 100%
+    );
+    border-radius: 4px;
+
+    &-title {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    &-desc {
+      margin-top: 8px;
+    }
+
+    .divider {
+      height: 2px;
+    }
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .benefits-section {
+    .container {
+      justify-content: space-around;
+      align-items: stretch;
+    }
+
+    .benefit-card {
+      max-width: 290px;
+      margin: 0 auto;
+      padding: 16px 20px;
+
+      &-title {
+        min-height: 40px;
+        font-size: 20px;
+      }
+
+      &-desc {
+        margin-top: 12px;
+        font-size: 18px;
+      }
+    }
+  }
+}

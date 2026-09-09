@@ -1,0 +1,165 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/colors";
+
+.footer {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  margin-top: auto;
+  padding: 26px 16px 10px 16px;
+
+  .grid {
+    gap: 16px;
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &-title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &-slogan {
+    margin-top: 24px;
+    color: $white;
+    line-height: 1.5;
+    color: color("opacities", "white-80%");
+  }
+
+  &-socials {
+    display: flex;
+    margin: {
+      top: auto;
+      bottom: 0;
+    }
+    padding-top: 16px;
+    gap: 16px;
+  }
+
+  .social-link {
+    transition:
+      transform 0.25s ease,
+      background-color 0.25s ease,
+      box-shadow 0.25s ease;
+
+    .icon-link {
+      display: inline-block;
+      font-size: 24px;
+      transition: transform 0.25s ease;
+    }
+  }
+
+  .social-link:hover {
+    background-color: rgba($white, 0.06);
+    box-shadow: 0 4px 14px rgba($white, 0.2);
+    border-radius: 50%;
+
+    .icon-link {
+      transform: scale(1.1);
+    }
+  }
+
+  .icon-viber {
+    color: color("secondary", "light-violet");
+  }
+
+  .icon-telegram {
+    color: color("secondary", "blue");
+  }
+
+  .footer-list {
+    margin-top: 16px;
+    list-style: none;
+
+    &-item {
+      color: color("opacities", "white-75%");
+      font-size: 16px;
+    }
+
+    .footer-list-item + .footer-list-item {
+      margin-top: 6px;
+    }
+  }
+
+  .footer-contact {
+    justify-content: flex-start;
+    margin-top: 16px;
+  }
+
+  .contact-label {
+    color: color("opacities", "white-70%");
+  }
+
+  &-bottom {
+    margin-top: 26px;
+    text-align: center;
+    color: color("opacities", "white-50%");
+    font-size: 14px;
+
+    .copyright {
+      position: relative;
+      padding-right: 16px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 8px;
+        bottom: 8px;
+        width: 4px;
+        height: 4px;
+        background-color: color("opacities", "white-50%");
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .footer {
+    padding: 42px 26px 12px 26px;
+
+    &-title,
+    &-slogan {
+      font-size: 16px;
+      max-width: 220px;
+    }
+
+    .icon-link {
+      font-size: 30px;
+    }
+
+    .footer-list {
+      margin-top: 20px;
+      list-style: none;
+
+      &-item {
+        font-size: 16px;
+      }
+
+      .footer-list-item + .footer-list-item {
+        margin-top: 10px;
+      }
+    }
+
+    .footer-contact {
+      margin-top: 16px;
+      gap: 16px;
+
+      .contact {
+        font-size: 16px;
+      }
+
+      .icon-contact {
+        font-size: 30px;
+      }
+    }
+
+    &-bottom {
+      margin-top: 26px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../../styles/utils/variables";
+@import "../../../styles/utils/colors";
+
+.cta-section {
+  .container {
+    .cta-desc {
+      margin-top: 12px;
+      text-align: center;
+    }
+
+    .img-wrap-dark {
+      margin-top: 24px;
+    }
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .cta-section {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: stretch;
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-desc {
+          margin-top: 32px;
+          text-align: left;
+        }
+
+        &-btn-group {
+          justify-content: center;
+        }
+      }
+
+      .img-wrap-dark {
+        margin: 0;
+      }
+    }
+  }
+}

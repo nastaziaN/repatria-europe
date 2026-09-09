@@ -1,0 +1,107 @@
+@import "../../../styles/utils/colors";
+@import "../../../styles/utils/variables";
+
+.contact-actions {
+  align-items: center;
+  margin-top: 24px;
+
+  .ask-btn {
+    min-width: 192px;
+    margin: 0 auto;
+  }
+
+  .quick-contact {
+    justify-content: center;
+    margin: 0 auto;
+    transition: transform 0.25s ease;
+
+    .icon-contacts {
+      display: inline-block;
+      color: color("primary", "gold");
+      font-size: 24px;
+      transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+    }
+
+    &-value {
+      display: block;
+      white-space: nowrap;
+      font-size: 16px;
+      transition: color 0.25s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+
+      .icon-contacts {
+        transform: scale(1.1);
+        filter: drop-shadow(0 3px 6px rgba(212, 160, 23, 0.3));
+      }
+
+      .quick-contact-value {
+        color: color("primary", "gold");
+      }
+    }
+  }
+
+  .messenger-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .quick-contact {
+      width: 40px;
+      height: 40px;
+      margin: 0;
+      border: 1px solid color("primary", "gold");
+      border-radius: 50%;
+      transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+      &:hover {
+        background-color: rgba(212, 160, 23, 0.08);
+        box-shadow: 0 4px 14px rgba(212, 160, 23, 0.25);
+      }
+    }
+
+    .quick-contact-content {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .contact-actions {
+    margin: 0 0 16px;
+
+    .quick-contact {
+      .icon-contacts {
+        font-size: 28px;
+      }
+    }
+
+    .quick-contact-phone {
+      padding-right: 16px;
+      justify-self: flex-start;
+    }
+
+    .messenger-actions {
+      justify-content: flex-start;
+      gap: 26px;
+
+      .quick-contact {
+        width: auto;
+        height: auto;
+        border: none;
+      }
+
+      .quick-contact-content {
+        display: block;
+      }
+    }
+  }
+}

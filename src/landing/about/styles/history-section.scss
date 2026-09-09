@@ -1,0 +1,74 @@
+@import "../../../styles/utils/variables";
+@import "../../../styles/utils/colors";
+
+.history-section {
+  margin: 0;
+  .history-title {
+    text-align: center;
+  }
+
+  .history {
+    display: flex;
+    margin-top: 16px;
+    flex-direction: column-reverse;
+
+    &-desc-first {
+      margin-top: 16px;
+    }
+
+    &-desc {
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+  }
+
+  .history-img-wrap {
+    margin-top: 24px;
+  }
+
+  .services-btn::before {
+    display: none;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .history-section {
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .history-title {
+      text-align: left;
+    }
+
+    .history {
+      margin-top: 16px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 410px;
+        gap: 16px;
+      }
+
+      .desc-wrap {
+        margin: auto 0;
+      }
+
+      &-desc {
+        margin-top: 16px;
+      }
+
+      &-btn-group {
+        margin-top: auto;
+        width: 100%;
+      }
+    }
+  }
+}

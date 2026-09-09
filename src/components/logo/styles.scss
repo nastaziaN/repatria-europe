@@ -1,0 +1,101 @@
+@import "../../styles/utils/colors";
+@import "../../styles/utils/variables";
+
+.logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 192px;
+  z-index: 3;
+
+  .logo-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+    font-family: "Cormorant Garamond", serif;
+    max-width: 100%;
+    text-transform: uppercase;
+    line-height: 1;
+
+    &-name {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+  }
+
+  .brand-location {
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: color("primary", "gold");
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      height: 1px;
+      background-color: color("primary", "gold");
+    }
+
+    &::before {
+      left: 6px;
+    }
+
+    &::after {
+      right: 6px;
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .logo-wrapper {
+    gap: 10px;
+    max-width: 200px;
+
+    .logo-img {
+      width: 52px;
+      height: 52px;
+    }
+
+    .brand {
+      max-width: 160px;
+
+      &-name {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .logo-wrapper {
+    gap: 12px;
+    width: 100%;
+    max-width: 240px;
+
+    .logo-img {
+      width: 68px;
+      height: 68px;
+    }
+
+    .brand {
+      max-width: 160px;
+
+      &-name {
+        font-size: 30px;
+      }
+    }
+
+    .brand-location {
+      font-size: 20px;
+    }
+  }
+}

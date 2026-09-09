@@ -1,0 +1,278 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/colors";
+
+.menu {
+  position: relative;
+  display: flex;
+  width: 100%;
+  padding: 18px 22px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: color("primary", "dark-blue");
+  z-index: 3;
+
+  .menu-item-link:hover,
+  .menu-item-link:active,
+  .menu-item-link-active {
+    color: color("primary", "gold");
+  }
+
+  &-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .burger-menu {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    z-index: 3;
+
+    .burger-menu-icon {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: color("primary", "gold");
+      transform: translateY(-50%);
+      transition: 0.3s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: color("primary", "gold");
+      transition: 0.3s;
+    }
+
+    &::before {
+      top: 2px;
+    }
+
+    &::after {
+      bottom: 2px;
+    }
+
+    &-open {
+      .burger-menu-icon {
+        opacity: 0;
+      }
+
+      &::before,
+      &::after {
+        top: 50%;
+        bottom: auto;
+      }
+
+      &::before {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    height: 100dvh;
+    padding: 84px 24px 36px;
+    flex-direction: column;
+    background-color: color("primary", "dark-blue");
+    transform: translateX(100%);
+    visibility: hidden;
+    transition:
+      transform 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 2;
+
+    &-open {
+      transform: translateX(0);
+      visibility: visible;
+    }
+  }
+
+  &-list {
+    display: flex;
+    margin: auto 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    list-style: none;
+  }
+
+  &-item {
+    font-size: 18px;
+  }
+
+  &-item-link {
+    display: block;
+    padding: 6px 8px;
+    white-space: nowrap;
+  }
+
+  &-socials {
+    display: flex;
+    margin-top: auto;
+    padding-top: 32px;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &-social-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid color("primary", "gold");
+    border-radius: 50%;
+    color: color("primary", "gold");
+    font-size: 22px;
+  }
+
+  &-privacy {
+    margin-top: 16px;
+    font-size: 14px;
+    color: color("opacities", "white-70%");
+    text-align: center;
+  }
+
+  &-overlay {
+    position: fixed;
+    inset: 0;
+    background: color("opacities", "black-45%");
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 1;
+
+    &-open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@media (min-width: $small-screen) {
+  .menu {
+    position: absolute;
+    padding: 22px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 52px;
+      background: linear-gradient(
+        180deg,
+        #06121f 0%,
+        rgba(6, 18, 31, 0.85) 35%,
+        rgba(6, 18, 31, 0.55) 65%,
+        rgba(6, 18, 31, 0) 100%
+      );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    &-drawer {
+      width: 56%;
+    }
+
+    &-privacy-page {
+      background-color: color("primary", "dark-blue");
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .menu {
+    background: linear-gradient(
+      180deg,
+      #06121f 0%,
+      rgba(6, 18, 31, 0.98) 25%,
+      rgba(6, 18, 31, 0.9) 45%,
+      rgba(6, 18, 31, 0.72) 65%,
+      rgba(6, 18, 31, 0.4) 82%,
+      rgba(6, 18, 31, 0) 100%
+    );
+
+    &::after {
+      display: none;
+    }
+
+    &-wrapper {
+      gap: 22px;
+      flex-direction: row-reverse;
+    }
+
+    &-drawer {
+      position: static;
+      display: block;
+      width: auto;
+      height: auto;
+      padding: 0;
+      background: none;
+      transform: none;
+      visibility: visible;
+    }
+
+    &-list {
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &-item {
+      font-size: 16px;
+    }
+
+    .burger-menu,
+    &-socials,
+    &-privacy,
+    &-overlay {
+      display: none;
+    }
+
+    &-privacy-page {
+      background-color: color("primary", "dark-blue");
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .menu {
+    &-list {
+      gap: 22px;
+    }
+
+    &-item {
+      font-size: 18px;
+    }
+  }
+}

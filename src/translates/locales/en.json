@@ -1,0 +1,642 @@
+{
+  "menu": {
+    "items": {
+      "1": "Home",
+      "2": "Services",
+      "3": "Countries",
+      "4": "About Us",
+      "5": "Contacts",
+      "6": "Fleet",
+      "7": "Documents"
+    }
+  },
+  "brand_name": "Repatria <accent>EUROPE</accent>",
+  "main_title": "International Funeral Transportation",
+  "slogan": "Bringing your loved ones home with dignity and respect",
+  "main_page": {
+    "hero": {
+      "title": "Across Europe",
+      "list": {
+        "1": "Available 24/7",
+        "2": "Fast and safe",
+        "3": "Professional and confidential",
+        "4": "Door to door",
+        "5": "Across Europe"
+      }
+    },
+    "services": {
+      "title": "Our Services",
+      "desc": "We provide a full range of funeral transportation and repatriation services across Europe and worldwide.",
+      "list": {
+        "1": {
+          "title": "Zinc coffin",
+          "desc": "High-quality zinc coffins compliant with international standards."
+        },
+        "2": {
+          "title": "Door-to-door service",
+          "desc": "From the place of death to the final destination without unnecessary worries"
+        },
+        "3": {
+          "title": "International repatriation",
+          "desc": "Transportation of the deceased across Europe and worldwide."
+        },
+        "4": {
+          "title": "Document preparation",
+          "desc": "Complete assistance with all required documents"
+        },
+        "5": {
+          "title": "Specialized transport",
+          "desc": "A modern fleet of vehicles equipped for safe transportation"
+        },
+        "6": {
+          "title": "Embalming",
+          "desc": "Professional embalming by certified specialists."
+        },
+        "7": {
+          "title": "Air transportation",
+          "desc": "Fast and reliable air transportation to any destination worldwide."
+        }
+      }
+    },
+    "cars": {
+      "title": "Our Fleet",
+      "desc": "Our modern specialized vehicles are equipped for the safe, dignified and respectful transportation of your loved ones across Europe and worldwide.",
+      "list": {
+        "1": {
+          "title": "MERCEDES-BENZ SPRINTER",
+          "model": "2020 model",
+          "desc": "A spacious and reliable van specially designed for international funeral transportation.",
+          "specifications": {
+            "1": "Up to 2 stretchers + 4 seats",
+            "2": "Climate control",
+            "3": "GPS tracking",
+            "4": "Discreet and dignified"
+          }
+        },
+        "2": {
+          "title": "MERCEDES-BENZ V-CLASS",
+          "model": "2024 model",
+          "desc": "Premium comfort and elegance for respectful and private transportation.",
+          "specifications": {
+            "1": "1 stretcher + 4 seats",
+            "2": "Premium comfort",
+            "3": "GPS tracking",
+            "4": "Discreet and dignified"
+          }
+        },
+        "3": {
+          "title": "FORD TRANSIT CUSTOM",
+          "model": "2020 model",
+          "desc": "An efficient and practical solution for transportation across Europe and beyond.",
+          "specifications": {
+            "1": "1 stretcher + 4 seats",
+            "2": "Climate control",
+            "3": "GPS tracking",
+            "4": "Discreet and dignified"
+          }
+        },
+        "4": {
+          "title": "FORD TRANSIT CUSTOM",
+          "model": "2020 model",
+          "desc": "A versatile modern vehicle for professional and discreet transportation.",
+          "specifications": {
+            "1": "1 stretcher + 4 seats",
+            "2": "Climate control",
+            "3": "GPS tracking",
+            "4": "Discreet and dignified"
+          }
+        }
+      }
+    },
+    "why_us": {
+      "title": "Why Choose Us",
+      "desc": "What your trust is built on",
+      "benefits": {
+        "1": "24/7 Support",
+        "2": "Trusted by 1,000+ families",
+        "3": "Europe-wide coverage",
+        "4": "Full legal compliance",
+        "5": "Over 10 years of experience"
+      },
+      "sub_desc": "<strong>We</strong> are a professional company specializing in international funeral transportation and repatriation across Europe and worldwide. \n <strong>Our mission</strong> is to bring your loved ones home with dignity, respect and full legal support."
+    },
+    "countries": {
+      "title": "We Operate Across Europe",
+      "desc": "We provide professional funeral transportation and repatriation services from all European countries and worldwide.",
+      "list": {
+        "de": "Germany",
+        "es": "Spain",
+        "it": "Italy",
+        "pt": "Portugal",
+        "fr": "France",
+        "ch": "Switzerland",
+        "be": "Belgium",
+        "at": "Austria",
+        "nl": "Netherlands",
+        "ro": "Romania",
+        "pl": "Poland",
+        "cz": "Czech Republic",
+        "sk": "Slovakia",
+        "hu": "Hungary",
+        "bg": "Bulgaria",
+        "hr": "Croatia",
+        "si": "Slovenia",
+        "rs": "Serbia",
+        "ba": "Bosnia and Herzegovina",
+        "me": "Montenegro",
+        "mk": "North Macedonia",
+        "al": "Albania",
+        "gr": "Greece",
+        "md": "Moldova",
+        "ua": "Ukraine",
+        "lt": "Lithuania",
+        "lv": "Latvia",
+        "ee": "Estonia",
+        "dk": "Denmark",
+        "se": "Sweden",
+        "no": "Norway",
+        "fi": "Finland",
+        "ie": "Ireland",
+        "gb": "United Kingdom",
+        "lu": "Luxembourg",
+        "mt": "Malta"
+      },
+      "view_all": "All Countries",
+      "collapse": "Collapse"
+    },
+    "process": {
+      "title": "How It Works",
+      "desc": "We take care of the entire process — from your first enquiry to final delivery.",
+      "list": {
+        "01": {
+          "title": "Contact Us",
+          "sub_desc": "Tell us where transportation needs to be arranged from and to."
+        },
+        "02": {
+          "title": "We Clarify the Details",
+          "sub_desc": "We determine the route, required documents and transportation format."
+        },
+        "03": {
+          "title": "We Organize the Process",
+          "sub_desc": "We prepare the documents, coordinate transportation and manage all necessary stages."
+        },
+        "04": {
+          "title": "We Deliver to the Final Destination",
+          "sub_desc": "We oversee the transportation through to completion and remain available throughout."
+        }
+      }
+    },
+    "docs": {
+      "title": "Complete Document Preparation",
+      "desc": "We handle the preparation of all documents required for repatriation, ensuring smooth and lawful transportation from the country of death to the final destination.",
+      "list": {
+        "1": {
+          "title": "Death Certificate",
+          "desc": "Official death certificate issued by the local authorities."
+        },
+        "2": {
+          "title": "Medical Certificate",
+          "desc": "Medical certificate stating the cause of death, issued by a doctor."
+        },
+        "3": {
+          "title": "Consular Permit",
+          "desc": "Consular authorization required for repatriation."
+        },
+        "4": {
+          "title": "Apostille",
+          "desc": "Legalization of documents for use in another country."
+        },
+        "5": {
+          "title": "Translation",
+          "desc": "Professional translation of all documents into the required languages."
+        },
+        "6": {
+          "title": "Transportation Permit",
+          "desc": "Permit for the international transportation of the deceased."
+        },
+        "7": {
+          "title": "Embalming Certificate",
+          "desc": "Document confirming that embalming has been carried out."
+        },
+        "8": {
+          "title": "Other Documents",
+          "desc": "Additional documents required by local authorities and airlines."
+        }
+      }
+    },
+    "docs_process": {
+      "title": "Document Preparation Process",
+      "list": {
+        "01": {
+          "title": "Contact Us",
+          "desc": "Call or message us. We are available 24/7 and ready to help."
+        },
+        "02": {
+          "title": "Document Review",
+          "desc": "We collect the information and review all required documents."
+        },
+        "03": {
+          "title": "Preparation",
+          "desc": "We professionally prepare and complete all required documents."
+        },
+        "04": {
+          "title": "Legalization",
+          "desc": "Where required, we legalize and apostille documents for international use."
+        },
+        "05": {
+          "title": "Approval and Handover",
+          "desc": "The documents are approved and prepared for transportation without unnecessary delays."
+        }
+      }
+    }
+  },
+  "form": {
+    "title": "Request a Quote",
+    "desc": "Fill out the form and we will provide you with a personalized quote as soon as possible.",
+    "transport": {
+      "form_title": "Transportation Information",
+      "inputs": {
+        "country": {
+          "label": "Country of Departure",
+          "placeholder": "Select a country"
+        },
+        "destination_country": {
+          "label": "Destination Country",
+          "placeholder": "Select a country"
+        },
+        "transport": {
+          "label": "Transport Type",
+          "placeholder": "Select a type",
+          "list": {
+            "1": "Mercedes Benz Sprinter",
+            "2": "Mercedes Benz V-class",
+            "3": "Ford Transit Custom"
+          }
+        },
+        "coffin": {
+          "label": "Coffin Type",
+          "coffin_list": {
+            "1": "Wooden",
+            "2": "Zinc",
+            "3": "Cremated remains"
+          }
+        },
+        "city": {
+          "label": "Departure City / Locality",
+          "placeholder": "Enter a city or location"
+        },
+        "destination_city": {
+          "label": "Destination City / Locality",
+          "placeholder": "Enter a city or location"
+        },
+        "date": {
+          "label": "Preferred Date",
+          "placeholder": "Select a date"
+        },
+        "additional_info": {
+          "label": "Additional Information",
+          "placeholder": "Enter additional information..."
+        }
+      }
+    },
+    "contacts": {
+      "form_title": "Contact Information",
+      "sub_desc": "You can provide only your contact information if you would like to learn more about transportation options.",
+      "inputs": {
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "Enter your phone number"
+        },
+        "name": {
+          "label": "First and Last Name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email"
+        },
+        "source": {
+          "label": "How did you hear about us?",
+          "placeholder": "Select from the list",
+          "options": {
+            "google": "Google Search",
+            "social_media": "Social Media",
+            "recommendation": "Recommendation from Friends",
+            "funeral_agency": "Funeral Service",
+            "partner": "Partner / Organization",
+            "other": "Other"
+          }
+        }
+      }
+    },
+    "errors": {
+      "required": "This field is required",
+      "email": "Enter a valid email address",
+      "phone": "Enter a valid phone number",
+      "city": "Enter a valid city name",
+      "accept": "You must agree to the Privacy Policy"
+    },
+    "accept": "I agree to the processing of my personal data in accordance with the",
+    "privacy_policy": "Privacy Policy"
+  },
+  "about_page": {
+    "main": {
+      "title": "About Us",
+      "slogan": "Compassion. Respect. Professionalism.",
+      "desc_1": "Repatria Europe is a professional company specializing in international funeral transportation and repatriation of the deceased across Europe and worldwide.",
+      "desc_2": "Our mission is to bring your loved ones home with dignity, respect and full legal support, taking care of every detail so you can focus on what matters most."
+    },
+    "history": {
+      "title": "Our Story",
+      "desc_1": "With over 10 years of experience, we have earned the trust of hundreds of families who rely on our compassion, discretion and professionalism.",
+      "desc_2": "We understand that every situation is unique. That is why we provide personalized support 24/7, ensuring a smooth and respectful repatriation process from start to finish."
+    },
+    "values": {
+      "title": "Our Values",
+      "desc": "What Matters to Us",
+      "list": {
+        "1": {
+          "title": "Dignity",
+          "desc": "We handle every case with the utmost dignity and respect"
+        },
+        "2": {
+          "title": "Professionalism",
+          "desc": "Our experienced team provides the highest standards of service"
+        },
+        "3": {
+          "title": "Compassion",
+          "desc": "We understand your grief and offer compassionate support"
+        },
+        "4": {
+          "title": "Trust",
+          "desc": "We are committed to honesty and transparency in everything we do"
+        }
+      }
+    },
+    "why_us": {
+      "title": "Why Choose Us",
+      "desc": "What your trust is built on",
+      "list": {
+        "1": {
+          "title": "Modern Fleet",
+          "desc": "Our vehicles are equipped for safe and dignified transportation."
+        },
+        "2": {
+          "title": "Available 24/7",
+          "desc": " We are here for you day and night. A dedicated manager will assist you at every stage."
+        },
+        "3": {
+          "title": "Document preparation",
+          "desc": "We assist with the preparation of required documents, permits and compliance with international requirements."
+        },
+        "4": {
+          "title": "Europe-wide coverage",
+          "desc": "We operate across Europe and worldwide."
+        }
+      }
+    },
+    "cta": {
+      "title": "We Are Here for You at Any Time",
+      "desc": "Contact us — we will take care of everything. \t Or click “Request a Quote” and fill out the form."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: September 9, 2026",
+    "company_name": "Sole Proprietor Dorin Popovych",
+    "intro": {
+      "description": "This Privacy Policy sets out the procedures for collecting, using, storing, transferring and protecting the personal data of users of the Repatria Europe website (hereinafter, the “Website”).",
+      "controller_before": "The personal data controller is",
+      "controller_after": "(hereinafter, “Repatria Europe”, “we”, “us”), which provides international repatriation, transportation of the deceased and related services.",
+      "consent": "By using the Website, submitting an enquiry, calling us or sending us a message, you confirm that you have read this Policy."
+    },
+    "sections": [
+      {
+        "number": "1",
+        "title": "What Data We Collect",
+        "paragraphs": [
+          {
+            "number": "1.1",
+            "text": "When using the Website and contacting us, we may receive personal data that you provide voluntarily:",
+            "items": [
+              "first name or full name;",
+              "phone number;",
+              "email address;",
+              "country and locality of departure;",
+              "country and locality of destination;",
+              "information required to arrange transportation;",
+              "preferred transportation date;",
+              "the content of your enquiry and any other information you provide voluntarily."
+            ]
+          },
+          {
+            "number": "1.2",
+            "text": "Please provide only the personal data and information necessary to process your enquiry, provide consultation or arrange the relevant services."
+          }
+        ]
+      },
+      {
+        "number": "2",
+        "title": "Purpose of Personal Data Processing",
+        "paragraphs": [
+          {
+            "number": "2.1",
+            "text": "Personal data is processed to the extent necessary for:",
+            "items": [
+              "processing applications and enquiries;",
+              "contacting you regarding your enquiry;",
+              "providing consultations regarding Repatria Europe services;",
+              "arranging international repatriation, transportation and related assistance;",
+              "agreeing on the route, timing and other terms of service;",
+              "preparing, entering into and performing contracts;",
+              "complying with applicable legal requirements."
+            ]
+          },
+          {
+            "number": "2.2",
+            "text": "Personal data is not used for purposes incompatible with those for which it was collected, unless otherwise permitted by law or separately consented to by the user."
+          }
+        ]
+      },
+      {
+        "number": "3",
+        "title": "Legal Basis for Processing",
+        "paragraphs": [
+          {
+            "number": "3.1",
+            "text": "Personal data is processed in accordance with applicable data protection legislation."
+          },
+          {
+            "number": "3.2",
+            "text": "Depending on the circumstances, the legal basis for processing personal data may include:",
+            "items": [
+              "your consent to the processing of personal data;",
+              "the need to take steps at your request before entering into a contract;",
+              "entering into and performing a contract;",
+              "compliance with legal obligations;",
+              "the legitimate interests of Repatria Europe, provided they are not overridden by your rights and interests."
+            ]
+          }
+        ]
+      },
+      {
+        "number": "4",
+        "title": "How We Use and Store Data",
+        "paragraphs": [
+          {
+            "number": "4.1",
+            "text": "Personal data is used only to the extent necessary to achieve the purposes set out in this Policy."
+          },
+          {
+            "number": "4.2",
+            "text": "Personal data is retained only for as long as necessary to process an enquiry, provide services, fulfil contractual obligations or comply with legal requirements."
+          },
+          {
+            "number": "4.3",
+            "text": "Once the purpose of processing has been fulfilled or consent has been withdrawn, and where there is no other lawful basis for continued retention, personal data is deleted or anonymized."
+          },
+          {
+            "number": "4.4",
+            "text": "We take appropriate organizational and technical measures to protect personal data against unauthorized access, loss, alteration, disclosure or other unlawful use."
+          }
+        ]
+      },
+      {
+        "number": "5",
+        "title": "Disclosure of Data to Third Parties",
+        "paragraphs": [
+          {
+            "number": "5.1",
+            "text": "We do not sell personal data or disclose it to third parties for their own advertising purposes."
+          },
+          {
+            "number": "5.2",
+            "text": "Personal data may be disclosed or accessed only to the extent necessary to operate the Website, process an enquiry or provide requested services, including by:",
+            "items": [
+              "hosting, email and other technical service providers;",
+              "partners and contractors directly involved in arranging transportation, repatriation and related assistance;",
+              "government, consular and other authorized authorities where necessary to provide services or required by law."
+            ]
+          },
+          {
+            "number": "5.3",
+            "text": "Persons granted access to personal data receive only the information necessary to perform the relevant functions or provide the relevant services."
+          }
+        ]
+      },
+      {
+        "number": "6",
+        "title": "Third-Party Services and Links",
+        "paragraphs": [
+          {
+            "number": "6.1",
+            "text": "Third-party technical services, including hosting and email delivery services, may be used to provide certain Website functions."
+          },
+          {
+            "number": "6.2",
+            "text": "The Website may contain links to third-party websites, platforms or services. You access such links at your own discretion."
+          },
+          {
+            "number": "6.3",
+            "text": "This Policy does not govern how third-party resources process personal data. We recommend reviewing their respective privacy policies."
+          }
+        ]
+      },
+      {
+        "number": "7",
+        "title": "Your Rights",
+        "paragraphs": [
+          {
+            "number": "7.1",
+            "text": "Subject to applicable data protection law, you may have the right to:",
+            "items": [
+              "receive information about the processing of your personal data;",
+              "access your personal data;",
+              "request correction of inaccurate or outdated data;",
+              "request deletion of personal data where provided for by law;",
+              "withdraw previously given consent to personal data processing;",
+              "object to personal data processing where provided for by law."
+            ]
+          },
+          {
+            "number": "7.2",
+            "text": "To exercise your rights, you may contact the personal data controller using the contact details provided on the Website."
+          }
+        ]
+      },
+      {
+        "number": "8",
+        "title": "Contact Regarding Personal Data",
+        "paragraphs": [
+          {
+            "number": "8.1",
+            "text": "For questions regarding this Policy, the processing of personal data or the exercise of your rights, you may contact the personal data controller:"
+          }
+        ]
+      },
+      {
+        "number": "9",
+        "title": "Changes to This Policy",
+        "paragraphs": [
+          {
+            "number": "9.1",
+            "text": "Repatria Europe may periodically amend or supplement this Privacy Policy."
+          },
+          {
+            "number": "9.2",
+            "text": "The current version of this Policy is always published on this page of the Website together with the date of the latest update."
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "services": {
+      "1": "International Transportation",
+      "2": "Document preparation",
+      "3": "Zinc Coffins",
+      "4": "Embalming",
+      "5": "Air transportation",
+      "6": "Delivery to the Burial Site"
+    }
+  },
+  "labels": {
+    "links": "Links",
+    "services": "Our Services",
+    "phone": "Call Us",
+    "contacts": "Contacts",
+    "copyright": "© 2026 Repatria Europe. All rights reserved.",
+    "privacy_policy": "Privacy Policy"
+  },
+  "buttons": {
+    "ask_btn": "Request a Quote",
+    "send_btn": "Send",
+    "more_btn": "Learn More",
+    "services_btn": "View Services"
+  },
+  "submit": {
+    "sending": "Sending...",
+    "success": {
+      "title": "Thank you! Your request has been sent successfully.",
+      "desc": "We will contact you as soon as possible."
+    },
+    "error": {
+      "title": "Failed to send your request.",
+      "desc": "Please try again."
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "International Repatriation & Deceased Transport | Repatria Europe",
+      "description": "International repatriation and deceased transport across Europe. Documentation, specialized transport and professional 24/7 support."
+    },
+    "about": {
+      "title": "About Repatria Europe | International Repatriation Across Europe",
+      "description": "Repatria Europe has over 10 years of experience in international repatriation and funeral transportation across Europe, with professional 24/7 support."
+    },
+    "privacy": {
+      "title": "Privacy Policy | Repatria Europe",
+      "description": "Repatria Europe privacy policy covering personal data processing and user rights."
+    }
+  }
+}

@@ -1,0 +1,120 @@
+@import "../../../styles/utils/colors";
+@import "../../../styles/utils/variables";
+
+.privacy {
+  &-header {
+    margin-top: 26px;
+    padding-bottom: 32px;
+  }
+
+  .main-title {
+    margin: 0;
+    text-align: center;
+  }
+
+  &-intro {
+    margin-top: 18px;
+    line-height: 1.5;
+    white-space: pre-line;
+
+    &-desc + .privacy-intro-desc {
+      margin-top: 12px;
+    }
+  }
+
+  &-section {
+    padding: 24px 0;
+    border-top: 1px solid rgba(6, 18, 31, 0.12);
+
+    &-head {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      gap: 12px;
+    }
+
+    &-number {
+      position: relative;
+      display: flex;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      border-radius: 50%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 1px;
+        border-radius: inherit;
+        background: linear-gradient(
+          360deg,
+          #b98600 0%,
+          rgba(212, 160, 23, 0) 100%
+        );
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+      }
+    }
+
+    &-title {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    &-desc {
+      margin-top: 12px;
+      line-height: 1.7;
+    }
+
+    &-list {
+      margin-top: 10px;
+      padding-left: 20px;
+      line-height: 1.7;
+      list-style-position: inside;
+    }
+  }
+
+  &-updated {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #8f6802;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .privacy {
+    &-header {
+      margin-top: 36px;
+      padding-bottom: 42px;
+    }
+
+    &-intro {
+      margin-top: 32px;
+      padding: 0 42px;
+    }
+
+    &-section {
+      padding: 28px 0;
+
+      &-title {
+        font-size: 20px;
+      }
+
+      &-desc,
+      &-list {
+        padding-left: 48px;
+      }
+    }
+
+    &-updated {
+      padding-left: 48px;
+    }
+  }
+}

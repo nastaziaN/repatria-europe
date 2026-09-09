@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://repatria-europe.com/sitemap.xml

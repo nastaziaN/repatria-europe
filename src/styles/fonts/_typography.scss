@@ -1,0 +1,59 @@
+// Font families
+
+$font-primary: "Manrope", sans-serif;
+$font-secondary: "Cormorant Garamond", serif;
+
+$typography: (
+  "main-title": (
+    "font-family": $font-secondary,
+    "font-weight": 600,
+    "line-height": 1.2,
+  ),
+
+  "h2": (
+    "font-family": $font-secondary,
+    "font-weight": 600,
+    "line-height": 1.1,
+  ),
+
+  "h3": (
+    "font-family": $font-primary,
+    "font-weight": 500,
+    "line-height": 1.3,
+  ),
+
+  "body": (
+    "font-family": $font-primary,
+    "font-weight": 400,
+    "line-height": 1.5,
+  ),
+);
+
+@mixin typography($type) {
+  $style: map-get($typography, $type);
+
+  font-family: map-get($style, "font-family");
+  font-weight: map-get($style, "font-weight");
+  line-height: map-get($style, "line-height");
+
+  @if map-has-key($style, "letter-spacing") {
+    letter-spacing: map-get($style, "letter-spacing");
+  }
+}
+
+h1,
+.main-title {
+  @include typography("main-title");
+}
+
+h2 {
+  @include typography("h2");
+}
+
+h3 {
+  @include typography("h3");
+}
+
+body {
+  @include typography("body");
+}

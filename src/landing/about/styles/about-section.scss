@@ -1,0 +1,132 @@
+@import "../../../styles/utils/variables";
+@import "../../../styles/utils/colors";
+
+.about-section {
+  position: relative;
+
+  .about {
+    margin-top: 16px;
+    font-size: 20px;
+    text-align: center;
+
+    &-page-title {
+      font-size: 20px;
+    }
+
+    &-title {
+      margin-top: 8px;
+    }
+
+    .about-slogan {
+      margin-top: 4px;
+      font-size: 20px;
+      color: color("opacities", "white-70%");
+    }
+
+    .accent-text {
+      color: color("primary", "gold");
+    }
+
+    &-desc {
+      margin-top: 12px;
+    }
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .about-section {
+    display: flex;
+    min-height: 100dvh;
+    background: {
+      image: url("../../../img/about-main.png");
+      size: cover;
+      repeat: no-repeat;
+      position: right center;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: color("opacities", "dark-blue-45%");
+      pointer-events: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+      z-index: 1;
+    }
+
+    .about {
+      margin-top: 0;
+      font-size: 20px;
+      text-align: left;
+
+      .title-wrap {
+        margin: 64px 0 0 0;
+      }
+
+      &-page-title {
+        font-size: 28px;
+      }
+
+      &-title {
+        margin-top: 16px;
+      }
+
+      .about-slogan {
+        margin-top: 6px;
+        font-size: 22px;
+        color: color("opacities", "white-70%");
+      }
+
+      .accent-text {
+        color: color("primary", "gold");
+      }
+
+      &-content {
+        position: relative;
+        max-width: 490px;
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          inset: -35px -60px;
+
+          background: radial-gradient(
+            ellipse at center,
+            rgba(2, 18, 32, 0.98) 0%,
+            rgba(2, 18, 32, 0.9) 35%,
+            rgba(2, 18, 32, 0.7) 60%,
+            rgba(2, 18, 32, 0.35) 78%,
+            rgba(2, 18, 32, 0) 100%
+          );
+
+          filter: blur(10px);
+          pointer-events: none;
+        }
+      }
+
+      &-desc-first {
+        margin-top: 0;
+      }
+
+      &-desc {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .about-section {
+    &::before {
+      display: none;
+    }
+  }
+}

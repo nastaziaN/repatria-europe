@@ -1,0 +1,56 @@
+@import "../../../styles/utils/colors";
+@import "../../../styles/utils/variables";
+
+.language-switcher {
+  position: relative;
+  font-size: 16px;
+  z-index: 3;
+
+  &-button {
+    padding: 4px 6px;
+    border: 0;
+    background-color: transparent;
+    border: 1px solid color("primary", "gold");
+    border-radius: 4px;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  &-list {
+    position: absolute;
+    display: none;
+    top: calc(100% + 2px);
+    width: 100%;
+    padding: 6px 8px;
+    list-style: none;
+    border: 1px solid color("primary", "gold");
+    border-radius: 4px;
+    z-index: 3;
+
+    &-open {
+      display: block;
+    }
+
+    &-item {
+      .switch-btn {
+        color: $white;
+        background: none;
+        border: none;
+      }
+
+      & + &.language-switcher-list-item {
+        border-top: 1px solid color("primary", "gold");
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .language-switcher {
+    font-size: 18px;
+
+    &-button {
+      padding: 4px 8px;
+    }
+  }
+}

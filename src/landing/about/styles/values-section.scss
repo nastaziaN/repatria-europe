@@ -1,0 +1,75 @@
+@import "../../../styles/utils/variables";
+@import "../../../styles/utils/colors";
+
+.values-section {
+  .values-title,
+  .desc {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .values-list {
+    margin-top: 16px;
+  }
+
+  .value-card {
+    padding: 8px;
+
+    &-header {
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-icon {
+      padding: 2px;
+      font-size: 24px;
+      color: color("primary", "gold");
+      border: 1px solid color("primary", "gold");
+      border-radius: 50%;
+    }
+
+    &-title {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    &-desc {
+      color: color("opacities", "white-70%");
+      margin-top: 8px;
+    }
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .values-section {
+    .values-list {
+      margin: 32px auto 0 auto;
+    }
+
+    .value-card {
+      max-width: 260px;
+      margin: 0 auto;
+      padding: 12px;
+
+      &-header {
+        gap: 16px;
+      }
+
+      &-icon {
+        padding: 4px;
+        font-size: 28px;
+      }
+
+      &-title {
+        font-size: 20px;
+      }
+
+      &-desc {
+        margin-top: 12px;
+        font-size: 18px;
+      }
+    }
+  }
+}

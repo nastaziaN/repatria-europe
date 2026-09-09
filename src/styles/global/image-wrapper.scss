@@ -1,0 +1,93 @@
+@import "../utils/variables";
+@import "../utils/colors";
+
+.img-wrap-dark,
+.img-wrap-light {
+  position: relative;
+  max-width: 582px;
+  height: auto;
+  align-self: center;
+  flex: 1 1 50%;
+
+  .img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 156px;
+    z-index: 1;
+  }
+}
+
+.img-wrap-dark::before {
+  left: -1px;
+  background: linear-gradient(90deg, #06121f 0%, rgba(6, 18, 31, 0) 100%);
+}
+
+.img-wrap-dark::after {
+  right: -1px;
+  background: linear-gradient(270deg, #06121f 0%, rgba(6, 18, 31, 0) 100%);
+}
+
+.img-wrap-light::before {
+  left: -1px;
+  background: linear-gradient(90deg, #f1f0ec 0%, rgba(241, 240, 236, 0) 100%);
+}
+
+.img-wrap-light::after {
+  right: -1px;
+  background: linear-gradient(270deg, #f1f0ec 0%, rgba(241, 240, 236, 0) 100%);
+}
+
+.cover {
+  position: relative;
+  padding: 28px 0;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      #06121f 0%,
+      rgba(6, 18, 31, 1) 25%,
+      rgba(6, 18, 31, 0.5) 50%,
+      rgba(6, 18, 31, 0) 100%
+    );
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(
+      to bottom,
+      rgba(6, 18, 31, 0) 0%,
+      rgba(6, 18, 31, 0.5) 50%,
+      rgba(6, 18, 31, 1) 75%,
+      #06121f 100%
+    );
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .img-wrap-dark,
+  .img-wrap-light {
+    min-width: 420px;
+  }
+
+  .cover {
+    display: none;
+  }
+}

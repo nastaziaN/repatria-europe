@@ -1,0 +1,73 @@
+@import "../../styles/utils/colors";
+@import "../../styles/utils/variables";
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.custom-swiper {
+  flex: 1;
+  min-width: 0;
+
+  .swiper-slide {
+    width: 100%;
+    max-width: 440px;
+    height: auto;
+  }
+
+  .swiper-pagination {
+    position: relative;
+    margin-top: 16px;
+  }
+
+  .swiper-pagination-bullet {
+    background: $white;
+    opacity: 1;
+
+    &-active {
+      opacity: 1;
+      background: color("primary", "gold");
+    }
+  }
+}
+
+.slider-btn {
+  display: none;
+  flex: 0 0 32px;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: $white;
+  background: color("opacities", "blue-65%");
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (min-width: $small-screen) {
+  .custom-swiper {
+    .swiper-slide {
+      width: 292px;
+    }
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .slider-btn {
+    display: flex;
+  }
+
+  .custom-swiper {
+    .swiper-slide {
+      width: auto;
+    }
+
+    .swiper-pagination {
+      margin-top: 24px;
+    }
+  }
+}
